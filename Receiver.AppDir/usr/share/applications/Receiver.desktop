@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Receiver
+Comment=A sample application
+Exec=Receiver
+Icon=Receiver
+Terminal=false
+Type=Application
+Categories=Utility;System;

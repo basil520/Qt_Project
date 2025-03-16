@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="images">
+        <file>images/WindowIcon.webp</file>
+        <file>images/a.png</file>
+        <file>images/b.png</file>
+        <file>images/c.png</file>
+        <file>images/d.png</file>
+        <file>images/e.png</file>
+    </qresource>
+</RCC>

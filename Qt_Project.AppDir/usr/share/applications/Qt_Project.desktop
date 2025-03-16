@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=QtApp
+Comment=A sample Qt application
+Exec=Qt_Project
+Icon=QtApp
+Terminal=false
+Type=Application
+Categories=Utility;System;
+
