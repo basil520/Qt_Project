@@ -66,7 +66,7 @@ void TreeWidget::onFillZeroButtonClicked(bool on) {
 void TreeWidget::onFilterOddButtonClicked(bool on) {
     Q_UNUSED(on)
     for (int i = m_TreeModel->rowCount() - 1; i >= 0; --i) {
-        if ((i + 1) % 2 == 0) { // 偶数行号
+        if ((i + 1) % 2 == 0) { 
             m_TreeModel->item(i - 1)->setText(QString("Row %1").arg(i / 2 + 1));
             m_TreeModel->removeRow(i);
         }
