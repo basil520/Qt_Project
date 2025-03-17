@@ -79,21 +79,25 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_CentralTabWidget, &QTabWidget::tabCloseRequested, this, &MainWindow::onTabWidgetTabCloseRequested);
     setCentralWidget(m_CentralTabWidget);
 
+    QWidget* widget = new QWidget(m_CentralTabWidget);
+    m_CentralTabWidget->addTab(widget, "widget");
+    m_CentralTabWidget->tabBar()->setTabButton(0, QTabBar::RightSide, nullptr);
+
     MyWidget* myWidget = new MyWidget(m_CentralTabWidget);
     m_CentralTabWidget->addTab(myWidget, "MyWidget");
-    m_CentralTabWidget->tabBar()->setTabButton(0, QTabBar::RightSide, nullptr);
+    m_CentralTabWidget->tabBar()->setTabButton(1, QTabBar::RightSide, nullptr);
 
     TableWidget* tableWidget = new TableWidget(m_CentralTabWidget);
     m_CentralTabWidget->addTab(tableWidget, "TableWidget");
-    m_CentralTabWidget->tabBar()->setTabButton(1, QTabBar::RightSide, nullptr);
+    m_CentralTabWidget->tabBar()->setTabButton(2, QTabBar::RightSide, nullptr);
 
     TreeWidget* treeWidget = new TreeWidget(m_CentralTabWidget);
     m_CentralTabWidget->addTab(treeWidget, "TreeWidget");
-    m_CentralTabWidget->tabBar()->setTabButton(2, QTabBar::RightSide, nullptr);
+    m_CentralTabWidget->tabBar()->setTabButton(3, QTabBar::RightSide, nullptr);
 
     DDSTextWidget* ddsWidget = new DDSTextWidget(m_CentralTabWidget);
     m_CentralTabWidget->addTab(ddsWidget, "DDSTextWidget");
-    m_CentralTabWidget->tabBar()->setTabButton(3, QTabBar::RightSide, nullptr);
+    m_CentralTabWidget->tabBar()->setTabButton(4, QTabBar::RightSide, nullptr);
 }
 
 MainWindow::~MainWindow() = default;
